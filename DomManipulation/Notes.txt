@@ -1,0 +1,51 @@
+Certainly! There are many methods and properties available for DOM manipulation in JavaScript
+
+
+Selecting Elements:-
+
+
+getElementById(id): Selects an element by its ID.
+getElementsByClassName(className): Selects elements by their class name.
+getElementsByTagName(tagName): Selects elements by their HTML tag name.
+querySelector(selector): Selects the first element that matches the CSS selector.
+querySelectorAll(selector): Selects all elements that match the CSS selector.
+
+Modifying Elements:-
+
+textContent and innerText: Sets or gets the text content of an element.
+innerHTML: Sets or gets the HTML content of an element
+setAttribute(attributeName, value): Sets an attribute on an element.
+removeAttribute(attributeName): Removes an attribute from an element.
+appendChild(node): Appends a child node to an element or The appendChild() method appends a node (element) as the last child of an element.
+removeChild(node): Removes a child node from an element.
+replaceChild(newNode, oldNode): Replaces a child node with a new node.
+cloneNode(deep): Creates a copy of an element (deep cloning copies children as well).
+
+
+
+Event Handling:
+19. addEventListener(event, handler): Adds an event listener to an element.
+
+removeEventListener(event, handler): Removes an event listener from an element.
+
+const myDiv = document.getElementById("myDIV");
+myDiv.addEventListener("mousemove", myFunction);
+
+function removeHandler() {
+  myDiv.removeEventListener("mousemove", myFunction);
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+
+Creating Elements:
+21. document.createElement(tagName): Creates a new element with the specified tag name.
+
+document.createTextNode(text): Creates a text node with the specified text.
+document.createDocumentFragment(): Creates a document fragment to efficiently manipulate multiple elements before adding them to the DOM.
+
+
+Traversing the DOM:
+24. parentNode, childNodes, firstChild, lastChild: Navigate through the tree structure of the DOM.

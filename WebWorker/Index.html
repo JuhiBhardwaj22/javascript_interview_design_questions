@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker Example</title>
+</head>
+<body>
+    <h1 id="worker">Web Worker Example</h1>
+    <p>Result:- <h1 id="result"></h1></p>
+    <button onclick="chnageText()">Click Me</button>
+    <script>
+           function chnageText(){
+            console.log("click")
+            document.getElementById("worker").textContent = "Worker ...........................!!!"
+        }
+        // Create a new Web Worker
+        const worker = new Worker('worker.js');
+
+        // Listen for messages from the Web Worker
+      worker.onmessage = (event) =>{
+         document.getElementById('result').textContent = event.data;
+      }
+
+        // Generate a large array of numbers and send it to the Web Worker
+        const numbers = Array.from({ length: 100000 }, (_, i) => i + 1);
+        worker.postMessage(numbers)
+        
+    </script>
+</body>
+</html>

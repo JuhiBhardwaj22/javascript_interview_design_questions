@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamically Generate</title>
+  </head>
+  <link rel="stylesheet" href="Style.css" />
+  <body>
+    <h1>Dynamically Generate</h1>
+    <label for="sort">Sort by:</label>
+    <select id="dropdown-order" onchange="handleSorting()">
+      <option value="asc">Ascending Order</option>
+      <option value="desc">Decending Order</option>
+    </select>
+    <div class="grid-container" id="product-grid"></div>
+    <script src="Dynamically.js"></script>
+  </body>
+</html>

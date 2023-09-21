@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Footer Sticky</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .main {
+        flex-grow: 1; /* This makes the main content area expand to fill available space */
+        padding: 20px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      #content-div {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+    </header>
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button id="content">AddContent</button>
+      <hr />
+      <div id="content-div"></div>
+    </div>
+    <footer>
+      <p>Footer</p>
+    </footer>
+
+    <script>
+      const addContent = document.getElementById("content");
+
+      const contentDiv = document.getElementById("content-div");
+
+      const data = "Hehhjkhkjhdfjnfmhj";
+      addContent.addEventListener("click", function () {
+        const para = document.createElement("p");
+        para.textContent += data;
+        contentDiv.appendChild(para);
+      });
+    </script>
+  </body>
+</html>

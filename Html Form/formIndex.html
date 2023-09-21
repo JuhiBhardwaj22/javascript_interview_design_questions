@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heloo HTML</title>
+    <style>
+      #form_html {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>HTML FORM</h1>
+      <form id="form_html" method="get" target="_blank">
+        <label for="fname">Name:</label><br />
+        <!-- These names will be used to identify the form fields when the form is submitted. -->
+        <input
+          placeholder="Enter Name"
+          type="text"
+          value="Juhi"
+          name="Username"
+          size="40"
+        /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          placeholder="Enter Email"
+          type="email"
+          value="Juhi@gmail.com"
+          name="Useremail"
+          size="40"
+        /><br /><br />
+        <label for="password">Password:</label><br />
+        <input
+          placeholder="Enter Password"
+          type="password"
+          value="Juhi"
+          name="Userpassword"
+          size="40"
+        /><br /><br />
+        <input type="submit" value="Save" />
+      </form>
+      <br /><br />
+      <textarea name="userMsg" rows="5" cols="30" form="form_html">
+The cat was playing in the garden.</textarea
+      >
+    </div>
+  </body>
+</html>
